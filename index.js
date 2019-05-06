@@ -44,7 +44,7 @@ const path = require("path");
 const nextArgv = process.argv.slice(2);
 
 nextArgv.unshift(path.resolve(__dirname, "./_tsserver.js"));
-nextArgv.push("--max_old_space_size=4096");
+nextArgv.unshift("--max_old_space_size=${memory}");
 
 spawn("node", nextArgv, {
   cwd: process.cwd(),
