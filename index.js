@@ -55,7 +55,7 @@ spawn("node", nextArgv, {
 
 function copyTypescript() {
   return new Promise((resolve, reject) => {
-    const source = path.join("node_modules", "typescript", "lib");
+    const source = path.join("node_modules", "typescript");
     const dest = path.join(destination, "typescript");
 
     if (fs.existsSync(dest)) {
@@ -73,14 +73,14 @@ function copyTypescript() {
 }
 
 function renameTsserver() {
-  const oldPath = path.join(destination, "typescript", "tsserver.js");
-  const newPath = path.join(destination, "typescript", "_tsserver.js");
+  const oldPath = path.join(destination, "typescript", "lib", "tsserver.js");
+  const newPath = path.join(destination, "typescript", "lib", "_tsserver.js");
 
   fs.renameSync(oldPath, newPath);
 }
 
 function writeBridgeFile() {
-  const filePath = path.join(destination, "typescript", "tsserver.js");
+  const filePath = path.join(destination, "typescript", "lib", "tsserver.js");
   fs.writeFileSync(filePath, BRIDGE_TEMPLATE);
 }
 
