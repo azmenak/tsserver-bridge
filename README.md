@@ -6,5 +6,5 @@ This package was created in response to https://github.com/Microsoft/TypeScript/
 
 ```
 npm install tsserver-bridge
-npm tsserver-bridge --memory=4096 --destination=ts-custom
+npx tsserver-bridge --memory=4096 --destination=ts-custom
 ```
