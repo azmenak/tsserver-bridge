@@ -2,6 +2,10 @@
 
 This package was created in response to https://github.com/Microsoft/TypeScript/issues/30981
 
+## NOW OBSOLETE 🎉
+
+With the upgrade of electron in [VSCode 1.4](https://code.visualstudio.com/updates/v1_40#_typescripttsservermaxtsservermemory) and the addition of `typescript.tsserver.maxTsServerMemory`, this package can now be removed!
+
 ### Example Useage
 
 ```
